@@ -21,6 +21,14 @@
             text-decoration: none;
             padding: 10px;
         }
+        section {
+            background-color: antiquewhite;
+        }
+        footer {
+            background-color: plum;
+            text-align: center;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -30,12 +38,112 @@
         <a href="../index.htm">Home</a></li>
         <a href="menu.htm">Menu</a></li>
         <a href="order.htm">Order</a></li>
+        <a href="#footer">Contact</a>
     </nav>
     </header>
+    <hr>
     <section>
+        <p>Select menu to order</p>
         <form>
-            <p>This will be order form</p>
+            <label for="drink">Drinks</label><br>
+
+            <input type="checkbox" name="drink" value="Orange Coffee"> Orange Coffee 55฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <input type="checkbox" name="drink" value="Strawberry Matcha"> Strawberry Matcha 75฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <input type="checkbox" name="drink" value="Honey Lemon"> Honey Lemon 60฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <input type="checkbox" name="drink" value="Milky Way"> Milky Way 80฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <label for="dessert">Dessert</label><br>
+
+            <input type="checkbox" name="dessert" value="Crème Brûlée"> Crème Brûlée 90฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <input type="checkbox" name="dessert" value="Blueberry Cheesecake"> Blueberry Cheesecake 85฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <input type="checkbox" name="dessert" value="Strawberry Panna Cotta"> Strawberry Panna Cotta 70฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <input type="checkbox" name="dessert" value="Chocolate Eclairs"> Chocolate Eclairs 80฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <label for="main_course">Main Course</label><br>
+
+            <input type="checkbox" name="main_course" value="Beef and Fries"> Beef and Fries 120฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <input type="checkbox" name="main_course" value="Cream Cheese Pasta"> Cream Cheese Pasta 100฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <input type="checkbox" name="main_course" value="Egg and Tuna Salad"> Egg and Tuna Salad 95฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
+
+            <input type="checkbox" name="main_course" value="Fish Finger"> Fish Finger 110฿<br>
+            <label for="number">Piece:</label>
+            <input type="number" name="piece" min="1" max="10">
+            <label for="note">Note:</label>
+            <input type="text" name="note" placeholder="Any special requests?"><br>
         </form>
-    <section>
+        <p>Fill in your information</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Your name"><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" placeholder="Your phone number"><br>
+
+            <label for="date">Date you want to receive the order:</label>
+            <input type="date" name="date"><br>
+
+            <label for="time">Time you want to receive the order:</label>
+            <input type="time" name="time"><br>
+
+            <label for="address">Address:</label>
+            <input type="text" name="address" placeholder="Your address"><br>
+        </form>
+    </section>
+    <button type="submit">Submit your order</button>
+    <footer id="footer">
+        <p>Contact us</p>
+    </footer>
 </body>
 </html>
