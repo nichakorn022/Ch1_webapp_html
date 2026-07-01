@@ -5,38 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Dog Cafe</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         html {
-            background-color: pink;
+            background-color: #F8F4E8;
+            color: #4F583B;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #EAD7B2;
+            border: 2px solid #D9A450;
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: 0 8px 20px rgba(79, 88, 59, 0.16);
         }
         nav {
-            background-color: plum;
-            display: block;
+            background-color: #4F583B;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
             text-align: center;
             padding: 10px;
         }
         h1 {
             text-align: center;
+            margin: 0 0 16px;
+            color: #4F583B;
+            letter-spacing: 0;
+        }
+        h1::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 4px;
+            margin: 10px auto 0;
+            background-color: #F4B840;
+            border-radius: 4px;
         }
         a {
+            color: #F8F4E8;
             text-decoration: none;
             padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        a:hover {
+            background-color: #D9A450;
+            color: #4F583B;
         }
         p {
-            padding-left: 10px;
+            padding: 0 10px;
+            font-size: 1.05rem;
+        }
+        body > p:first-of-type {
+            background-color: #EAD7B2;
+            border-left: 6px solid #D9A450;
+            border-radius: 8px;
+            margin: 24px 0;
+            padding: 18px;
+        }
+        body > p:nth-of-type(2),
+        body > p:nth-of-type(3) {
+            color: #4F583B;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        hr {
+            border: 0;
+            border-top: 3px solid #F4B840;
+            margin: 24px 0;
+        }
+        aside {
+            background-color: #EAD7B2;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            padding: 16px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th {
+            background-color: #D9A450;
+            color: #4F583B;
+            padding: 12px;
+        }
+        td {
+            padding: 12px;
+        }
+        td a {
+            display: inline-block;
+            padding: 0;
+            background-color: transparent;
+        }
+        td a:hover {
+            background-color: transparent;
         }
         section {
-            padding: 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            padding: 18px;
             margin: 0 auto;
-            background-color: antiquewhite;
+            background-color: #EAD7B2;
+            border-radius: 8px;
             text-align: center;
         }
         img {
-            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            border: 4px solid #F8F4E8;
+            border-radius: 8px;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 6px 14px rgba(79, 88, 59, 0.18);
         }
         footer {
-            background-color: plum;
+            background-color: #4F583B;
+            color: #F8F4E8;
+            border-radius: 8px;
+            margin-top: 24px;
             text-align: center;
             padding: 10px;
+        }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>

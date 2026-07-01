@@ -5,29 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Dog Cafe</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         html {
-            background-color: pink;
+            background-color: #F8F4E8;
+            color: #4F583B;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #EAD7B2;
+            border: 2px solid #D9A450;
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: 0 8px 20px rgba(79, 88, 59, 0.16);
         }
         nav {
-            background-color: plum;
-            display: block;
+            background-color: #4F583B;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
             text-align: center;
             padding: 10px;
         }
         h1 {
             text-align: center;
+            margin: 0 0 16px;
+            color: #4F583B;
+            letter-spacing: 0;
+        }
+        h1::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 4px;
+            margin: 10px auto 0;
+            background-color: #F4B840;
+            border-radius: 4px;
         }
         a {
+            color: #F8F4E8;
             text-decoration: none;
             padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        a:hover {
+            background-color: #D9A450;
+            color: #4F583B;
         }
         section {
-            padding: 12px;
+            padding: 18px 0;
+            overflow-x: auto;
+        }
+        hr {
+            border: 0;
+            border-top: 3px solid #F4B840;
+            margin: 24px 0;
+        }
+        table {
+            width: 100%;
+            border: 0;
+            border-collapse: collapse;
+            background-color: #EAD7B2;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(79, 88, 59, 0.16);
+        }
+        th {
+            background-color: #4F583B;
+            color: #F8F4E8;
+            padding: 14px;
+            text-align: left;
+        }
+        td {
+            border-top: 1px solid rgba(79, 88, 59, 0.2);
+            padding: 14px;
+            vertical-align: middle;
+        }
+        tr:nth-child(even) {
+            background-color: #F8F4E8;
+        }
+        tr:hover {
+            background-color: #EAD7B2;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+            border: 4px solid #F8F4E8;
+            border-radius: 8px;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 6px 14px rgba(79, 88, 59, 0.18);
         }
         footer {
-            background-color: plum;
+            background-color: #4F583B;
+            color: #F8F4E8;
+            border-radius: 8px;
+            margin-top: 24px;
             text-align: center;
             padding: 10px;
+        }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
@@ -35,14 +123,14 @@
     <header>
     <h1>Big Dog Cafe</h1>
     <nav>
-        <a href="../index.htm">Home</a></li>
-        <a href="menu.htm">Menu</a></li>
-        <a href="order.htm">Order</a></li>
+        <a href="../index.htm">Home</a>
+        <a href="menu.htm">Menu</a>
+        <a href="order.htm">Order</a>
         <a href="#footer">Contact</a>
     </nav>
     </header>
     <section>
-    <table border="1" align="center">
+    <table align="center">
         <thead>
             <tr>
                 <th>Image</th>
@@ -53,7 +141,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr id="drinks" data-href="https://example.com">
+            <tr id="drinks">
                 <td><img src="../img/menu_4.webp" width="200" height="auto"></td>
                 <td>Orange Coffee</td>
                 <td>Drinks</td>

@@ -5,29 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Dog Cafe</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         html {
-            background-color: pink;
+            background-color: #F8F4E8;
+            color: #4F583B;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #EAD7B2;
+            border: 2px solid #D9A450;
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: 0 8px 20px rgba(79, 88, 59, 0.16);
         }
         nav {
-            background-color: plum;
-            display: block;
+            background-color: #4F583B;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
             text-align: center;
             padding: 10px;
         }
         h1 {
             text-align: center;
+            margin: 0 0 16px;
+            color: #4F583B;
+            letter-spacing: 0;
+        }
+        h1::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 4px;
+            margin: 10px auto 0;
+            background-color: #F4B840;
+            border-radius: 4px;
         }
         a {
+            color: #F8F4E8;
             text-decoration: none;
             padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        a:hover {
+            background-color: #D9A450;
+            color: #4F583B;
         }
         section {
-            background-color: antiquewhite;
+            background-color: #EAD7B2;
+            border-radius: 8px;
+            margin: 24px 0;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(79, 88, 59, 0.16);
+        }
+        hr {
+            border: 0;
+            border-top: 3px solid #F4B840;
+            margin: 24px 0;
+        }
+        form p {
+            background-color: #4F583B;
+            color: #F8F4E8;
+            border-radius: 8px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin: 18px 0 12px;
+            padding: 10px 14px;
+        }
+        label {
+            color: #4F583B;
+            font-weight: bold;
+        }
+        input {
+            border: 2px solid #D9A450;
+            border-radius: 6px;
+            margin: 6px 8px 12px 4px;
+            padding: 8px;
+            font: inherit;
+        }
+        input[type="checkbox"] {
+            accent-color: #4F583B;
+            margin-left: 0;
+        }
+        input:focus {
+            border-color: #F4B840;
+            outline: 3px solid rgba(244, 184, 64, 0.35);
+        }
+        button {
+            background-color: #F4B840;
+            border: 0;
+            border-radius: 8px;
+            color: #4F583B;
+            cursor: pointer;
+            display: block;
+            font: inherit;
+            font-weight: bold;
+            margin: 0 auto 24px;
+            padding: 12px 20px;
+            box-shadow: 0 6px 14px rgba(79, 88, 59, 0.18);
+        }
+        button:hover {
+            background-color: #D9A450;
         }
         footer {
-            background-color: plum;
+            background-color: #4F583B;
+            color: #F8F4E8;
+            border-radius: 8px;
+            margin-top: 24px;
             text-align: center;
             padding: 10px;
+        }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
@@ -35,16 +135,16 @@
     <header>
     <h1>Big Dog Cafe</h1>
     <nav>
-        <a href="../index.htm">Home</a></li>
-        <a href="menu.htm">Menu</a></li>
-        <a href="order.htm">Order</a></li>
+        <a href="../index.htm">Home</a>
+        <a href="menu.htm">Menu</a>
+        <a href="order.htm">Order</a>
         <a href="#footer">Contact</a>
     </nav>
     </header>
     <hr>
     <section>
-        <p>Select menu to order</p>
-        <form>
+        <form action="submit_order.php" method="post">
+            <p>Select menu to order</p>
             <label for="drink">Drinks</label><br>
 
             <input type="checkbox" name="drink" value="Orange Coffee"> Orange Coffee 55฿<br>
@@ -122,9 +222,9 @@
             <input type="number" name="piece" min="1" max="10">
             <label for="note">Note:</label>
             <input type="text" name="note" placeholder="Any special requests?"><br>
-        </form>
-        <p>Fill in your information</p>
-        <form>
+
+            <p>Fill in your information</p>
+
             <label for="name">Name:</label>
             <input type="text" name="name" placeholder="Your name"><br>
 
@@ -139,9 +239,10 @@
 
             <label for="address">Address:</label>
             <input type="text" name="address" placeholder="Your address"><br>
+
+            <button type="submit">Submit your order</button>
         </form>
     </section>
-    <button type="submit">Submit your order</button>
     <footer id="footer">
         <p>Contact us</p>
     </footer>
